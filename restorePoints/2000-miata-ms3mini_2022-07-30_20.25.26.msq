@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <msq xmlns="http://www.msefi.com/:msq">
-<bibliography author="TunerStudio MS Ultra 3.1.08 - EFI Analytics, Inc." tuneComment="" writeDate="Mon Aug 01 08:29:51 CDT 2022"/>
+<bibliography author="TunerStudio MS Ultra 3.1.08 - EFI Analytics, Inc." tuneComment="&lt;html&gt;Restore Point: User Requested Save of Settings - &lt;br&gt;" writeDate="Sat Jul 30 20:25:26 CDT 2022"/>
 <versionInfo fileFormat="5.0" firmwareInfo="MS3+1.5.2+release+++++20211110+12%3A29GMT+%28c%29+JSM%2FKC+********" nPages="20" signature="MS3 Format 0569.00 "/>
 <page>
 <pcVariable name="tsCanId">"0"</pcVariable>
@@ -400,7 +400,7 @@
 <constant name="pwmidleset_inv">"Normal, 0%=off"</constant>
 <constant digits="0" name="trig_init">1.0</constant>
 <constant digits="0" name="pwmidle_ms" units="ms">50.0</constant>
-<constant digits="0" name="pwmidle_close_delay" units="s">0.0</constant>
+<constant digits="0" name="pwmidle_close_delay" units="s">3.0</constant>
 <constant digits="1" name="pwmidle_open_duty" units="%">88.984</constant>
 <constant digits="0" name="pwmidle_open_steps" units="steps">227.0</constant>
 <constant digits="1" name="pwmidle_closed_duty" units="%">10.192</constant>
@@ -1550,15 +1550,15 @@
 <constant name="can_outpc_gp63">"Off"</constant>
 <constant name="can_rcv_opt_on">"On"</constant>
 <constant name="can_rcv_opt_share">"Off"</constant>
-<constant digits="0" name="engine_state_accel_slow_thresh" units="rpm/sec">60.0</constant>
-<constant digits="0" name="engine_state_decel_slow_thresh" units="rpm/sec">-150.0</constant>
+<constant digits="0" name="engine_state_accel_slow_thresh" units="rpm/sec">800.0</constant>
+<constant digits="0" name="engine_state_decel_slow_thresh" units="rpm/sec">-800.0</constant>
 <constant digits="1" name="engine_state_tps_closed_thresh" units="%">1.0</constant>
-<constant digits="1" name="engine_state_overrun_map_thresh" units="kPa">18.0</constant>
+<constant digits="1" name="engine_state_overrun_map_thresh" units="kPa">20.0</constant>
 <constant digits="0" name="engine_state_overrun_rpm_thresh" units="rpm">1200.0</constant>
 <constant name="engine_state_flags_use_vss">"Off"</constant>
 <constant digits="2" name="vss_samp_int" units="ms">50.0</constant>
 <constant digits="0" name="engine_state_vss_thresh" units="MPH">0.22369</constant>
-<constant digits="1" name="engine_state_tps_wot_thresh" units="%">90.0</constant>
+<constant digits="1" name="engine_state_tps_wot_thresh" units="%">95.0</constant>
 <constant digits="2" name="oilpress_time" units="s">0.1</constant>
 <constant name="can_bcast_lotus_fuel">"Sensor 1"</constant>
 <constant name="tbrake_opt1_creep">"Single steps"</constant>
@@ -2373,10 +2373,10 @@
          180.0 
       </constant>
 <constant cols="1" digits="0" name="pwmidle_target_rpms" rows="8" units="rpms">
+         1500.0 
+         1400.0 
+         1300.0 
          1200.0 
-         1200.0 
-         1150.0 
-         1150.0 
          1100.0 
          1000.0 
          900.0 
@@ -2467,15 +2467,15 @@
          50.0 
       </constant>
 <constant cols="1" digits="1" name="pwmidle_crank_dutyorsteps_duty" rows="4" units="%">
-         39.2 
-         37.24 
          36.064 
+         34.104 
+         32.928 
          32.144 
       </constant>
 <constant cols="1" digits="0" name="pwmidle_crank_dutyorsteps_steps" rows="4" units="steps">
-         100.0 
-         95.0 
          92.0 
+         87.0 
+         84.0 
          82.0 
       </constant>
 <constant cols="1" digits="1" name="pwmidle_crank_clt_temps" rows="4" units="°F">
@@ -3122,16 +3122,16 @@
          0.0 
       </constant>
 <constant cols="1" digits="1" name="ipwmTable" rows="10" units="%">
-         39.984 
-         38.808 
-         38.024 
-         36.848 
-         36.064 
-         34.888 
-         34.104 
-         32.928 
-         30.184 
-         27.048 
+         23.52 
+         21.168 
+         19.208 
+         17.248 
+         14.896 
+         12.544 
+         10.584 
+         8.232 
+         5.096 
+         1.96 
       </constant>
 <constant cols="1" digits="1" name="opentimepct0" rows="6" units="%">
          220.0 
@@ -3793,14 +3793,14 @@
 </page>
 <page number="8" size="1024">
 <constant cols="16" digits="1" name="veTable3" rows="16" units="%">
-         48.1 46.6 56.6 62.0 50.8 26.8 20.8 14.4 7.5 4.1 2.5 2.2 3.1 5.7 15.9 47.8 
-         43.2 42.9 45.1 55.8 51.9 48.1 47.2 44.2 37.9 29.5 34.2 39.4 30.0 31.0 42.4 54.4 
-         43.6 42.4 45.1 54.3 57.8 63.2 61.8 57.1 57.9 52.3 58.3 66.0 63.9 60.5 58.2 58.2 
-         47.6 48.8 58.0 57.5 63.4 70.4 68.0 64.6 63.7 60.1 68.6 71.6 71.3 67.9 64.8 65.7 
-         48.2 55.7 62.1 60.3 69.9 72.2 70.8 68.4 62.7 63.6 70.5 75.4 77.0 74.3 71.2 69.0 
-         54.8 62.9 64.2 67.9 72.3 71.0 69.4 70.7 66.6 64.6 73.2 78.7 80.9 80.8 75.9 73.5 
-         60.0 66.2 81.6 77.1 74.3 79.6 75.2 76.9 79.7 82.1 89.2 91.9 93.7 92.5 88.0 82.5 
-         66.1 66.9 86.1 85.7 80.2 85.5 85.2 87.1 85.2 89.3 93.6 95.0 94.4 92.4 88.3 83.9 
+         48.1 42.4 41.1 41.9 35.7 15.9 10.3 9.8 5.2 2.4 2.6 2.6 3.0 5.5 15.1 54.3 
+         44.4 43.4 44.7 49.6 49.4 46.2 44.8 44.4 42.2 42.1 46.1 47.1 35.7 33.8 42.8 54.4 
+         45.9 43.5 46.1 56.4 56.5 56.1 58.6 58.0 56.3 60.8 65.9 68.0 63.9 60.5 58.2 58.2 
+         48.4 52.8 57.6 57.9 63.4 62.0 64.9 64.0 61.4 64.8 70.7 70.8 71.3 67.9 64.8 65.7 
+         49.7 60.1 67.1 67.0 68.5 68.0 69.2 65.9 64.0 65.0 74.1 75.4 77.0 74.3 71.2 69.0 
+         55.4 64.0 73.4 84.1 72.6 70.2 68.5 67.6 66.6 66.5 75.6 78.6 80.9 80.8 75.9 73.5 
+         61.0 65.4 76.7 80.8 78.0 78.0 73.9 74.2 74.4 85.6 89.2 92.9 95.9 94.3 89.6 82.4 
+         67.7 66.6 77.4 87.8 86.7 83.3 81.9 85.9 84.8 90.1 94.3 98.0 97.2 95.2 91.1 84.1 
          75.6 80.9 87.1 89.2 89.8 91.0 92.8 94.8 97.0 99.6 101.9 103.3 102.9 101.1 97.9 96.5 
          84.6 87.7 92.3 94.9 95.5 96.6 98.4 100.3 102.4 104.4 106.5 107.7 107.7 106.1 103.0 100.1 
          88.8 91.4 94.6 96.3 97.4 99.1 101.0 103.0 105.0 107.0 109.0 110.2 110.3 108.7 105.5 102.8 
@@ -6222,7 +6222,10 @@
          16408.0 
          16416.0 
          16424.0 
+         16426.0 
+         16428.0 
          16432.0 
+         16434.0 
          16450.0 
          8262.0 
          8270.0 
@@ -6233,7 +6236,6 @@
          8278.0 
          8279.0 
          8286.0 
-         16618.0 
          8444.0 
          8445.0 
          8446.0 
@@ -6250,21 +6252,19 @@
          16694.0 
          16696.0 
          16698.0 
-         8522.0 
          16720.0 
          16722.0 
          8543.0 
          16760.0 
+         16766.0 
+         16768.0 
+         16770.0 
          16818.0 
-         8639.0 
+         16826.0 
+         16828.0 
+         8638.0 
+         16860.0 
          8679.0 
-         0.0 
-         0.0 
-         0.0 
-         0.0 
-         0.0 
-         0.0 
-         0.0 
          0.0 
          0.0 
          0.0 
@@ -6884,23 +6884,23 @@
       </constant>
 <constant digits="0" name="portusage_canpwm_src">0.0</constant>
 <constant cols="1" digits="0" name="UNALLOCATED_TOP_15" rows="18" units="RAW">
-         132.0 
+         128.0 
          66.0 
          1.0 
          235.0 
          25.0 
-         73.0 
+         64.0 
          1.0 
          16.0 
-         66.0 
-         217.0 
+         64.0 
+         153.0 
          78.0 
          112.0 
          128.0 
-         173.0 
-         90.0 
+         137.0 
+         94.0 
          77.0 
-         50.0 
+         18.0 
          156.0 
       </constant>
 </page>
@@ -9063,6 +9063,5 @@
 <userComment name="opentimepct0" value="Stock"/>
 <userComment name="opentimepct1" value="FlowForce 725cc"/>
 <userComment name="opentimepct2" value="FlowForce 380"/>
-<userComment name="ipwmTable" value=""/>
 </userComments>
 </msq>
