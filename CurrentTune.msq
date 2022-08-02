@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <msq xmlns="http://www.msefi.com/:msq">
-<bibliography author="TunerStudio MS Ultra 3.1.08 - EFI Analytics, Inc." tuneComment="" writeDate="Mon Aug 01 08:29:51 CDT 2022"/>
+<bibliography author="TunerStudio MS Ultra 3.1.08 - EFI Analytics, Inc." tuneComment="" writeDate="Mon Aug 01 21:19:30 CDT 2022"/>
 <versionInfo fileFormat="5.0" firmwareInfo="MS3+1.5.2+release+++++20211110+12%3A29GMT+%28c%29+JSM%2FKC+********" nPages="20" signature="MS3 Format 0569.00 "/>
 <page>
 <pcVariable name="tsCanId">"0"</pcVariable>
@@ -112,13 +112,13 @@
 <constant digits="1" name="OverBoostKpa" units="kPa">180.0</constant>
 <constant digits="1" name="OverBoostHyst" units="kPa">10.0</constant>
 <constant digits="1" name="N2Olaunchmaxmap" units="kPa">150.0</constant>
-<constant digits="1" name="tpsThresh" units="%/s">30.0</constant>
+<constant digits="1" name="tpsThresh" units="%/s">1.0</constant>
 <constant digits="0" name="mapThresh" units="kPa/s">999.0</constant>
 <constant digits="0" name="taeColdA" units="%ReqFuel">10.0</constant>
 <constant digits="0" name="taeColdM" units="%">130.0</constant>
 <constant digits="2" name="taeTime" units="s">0.1</constant>
 <constant digits="0" name="tpsasync_events" units="events">10.0</constant>
-<constant digits="0" name="tdePct">98.0</constant>
+<constant digits="0" name="tdePct">100.0</constant>
 <constant digits="1" name="floodClear" units="%">80.0</constant>
 <constant digits="1" name="TPSOXLimit" units="%">80.0</constant>
 <constant digits="0" name="tpsProportion" units="%">100.0</constant>
@@ -1109,7 +1109,7 @@
 <constant name="testsel_inj">"InjG"</constant>
 <constant name="testsel_coil">"CoilB"</constant>
 <constant digits="0" name="dbgtooth" units="tooth">0.0</constant>
-<constant digits="0" name="iacpostest" units="steps">28.0</constant>
+<constant digits="0" name="iacpostest" units="steps">26.0</constant>
 <constant digits="0" name="iachometest" units="steps">160.0</constant>
 <constant digits="0" name="iactest_0">0.0</constant>
 <constant name="flashlock">"Unlocked"</constant>
@@ -1550,10 +1550,10 @@
 <constant name="can_outpc_gp63">"Off"</constant>
 <constant name="can_rcv_opt_on">"On"</constant>
 <constant name="can_rcv_opt_share">"Off"</constant>
-<constant digits="0" name="engine_state_accel_slow_thresh" units="rpm/sec">60.0</constant>
-<constant digits="0" name="engine_state_decel_slow_thresh" units="rpm/sec">-150.0</constant>
+<constant digits="0" name="engine_state_accel_slow_thresh" units="rpm/sec">350.0</constant>
+<constant digits="0" name="engine_state_decel_slow_thresh" units="rpm/sec">-350.0</constant>
 <constant digits="1" name="engine_state_tps_closed_thresh" units="%">1.0</constant>
-<constant digits="1" name="engine_state_overrun_map_thresh" units="kPa">18.0</constant>
+<constant digits="1" name="engine_state_overrun_map_thresh" units="kPa">20.0</constant>
 <constant digits="0" name="engine_state_overrun_rpm_thresh" units="rpm">1200.0</constant>
 <constant name="engine_state_flags_use_vss">"Off"</constant>
 <constant digits="2" name="vss_samp_int" units="ms">50.0</constant>
@@ -2373,10 +2373,10 @@
          180.0 
       </constant>
 <constant cols="1" digits="0" name="pwmidle_target_rpms" rows="8" units="rpms">
+         1300.0 
+         1300.0 
          1200.0 
          1200.0 
-         1150.0 
-         1150.0 
          1100.0 
          1000.0 
          900.0 
@@ -6223,6 +6223,7 @@
          16416.0 
          16424.0 
          16432.0 
+         16438.0 
          16450.0 
          8262.0 
          8270.0 
@@ -6258,7 +6259,6 @@
          16818.0 
          8639.0 
          8679.0 
-         0.0 
          0.0 
          0.0 
          0.0 
@@ -6884,24 +6884,24 @@
       </constant>
 <constant digits="0" name="portusage_canpwm_src">0.0</constant>
 <constant cols="1" digits="0" name="UNALLOCATED_TOP_15" rows="18" units="RAW">
-         132.0 
-         66.0 
-         1.0 
+         128.0 
+         83.0 
+         33.0 
          235.0 
          25.0 
-         73.0 
+         201.0 
          1.0 
          16.0 
-         66.0 
+         82.0 
          217.0 
-         78.0 
+         79.0 
          112.0 
-         128.0 
-         173.0 
-         90.0 
+         192.0 
+         189.0 
+         94.0 
          77.0 
          50.0 
-         156.0 
+         152.0 
       </constant>
 </page>
 <page number="16" size="1024">
@@ -7548,7 +7548,7 @@
          0.0 
       </constant>
 <constant cols="1" digits="1" name="taeRates" rows="4" units="%/s">
-         50.0 
+         25.0 
          125.0 
          250.0 
          500.0 
