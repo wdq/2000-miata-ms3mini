@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <msq xmlns="http://www.msefi.com/:msq">
-<bibliography author="TunerStudio MS Ultra 3.1.08 - EFI Analytics, Inc." tuneComment="" writeDate="Fri Aug 26 08:22:04 CDT 2022"/>
+<bibliography author="TunerStudio MS Ultra 3.1.08 - EFI Analytics, Inc." tuneComment="&lt;html&gt;Restore Point: TunerStudio settings before accepting Controller values in a Difference Report. - &lt;br&gt;" writeDate="Fri Aug 12 17:56:49 CDT 2022"/>
 <versionInfo fileFormat="5.0" firmwareInfo="MS3+1.5.2+release+++++20211110+12%3A29GMT+%28c%29+JSM%2FKC+********" nPages="20" signature="MS3 Format 0569.00 "/>
 <page>
 <pcVariable name="tsCanId">"0"</pcVariable>
@@ -130,7 +130,7 @@
 <constant digits="0" name="oldegoLimit" units="%">15.0</constant>
 <constant digits="3" name="EGOVtarget" units="Volts">0.44988</constant>
 <constant name="tempUnits">"Coolant/MAT Tables in °F"</constant>
-<constant digits="0" name="egonum">1.0</constant>
+<constant digits="0" name="egonum">2.0</constant>
 <constant digits="0" name="rtc_trim" units="ppm">0.0</constant>
 <constant digits="1" name="fastIdleT" units="°F">140.0</constant>
 <constant digits="1" name="egoTemp" units="°F">113.0</constant>
@@ -1133,7 +1133,7 @@
 <constant name="u08_debug38_1">"Off"</constant>
 <constant name="u08_debug38_2">"Useful data"</constant>
 <constant name="egoport1">"EGO"</constant>
-<constant name="egoport2">"EGO"</constant>
+<constant name="egoport2">"CAN EGO"</constant>
 <constant name="egoport3">"EGO"</constant>
 <constant name="egoport4">"EGO"</constant>
 <constant name="egoport5">"EGO"</constant>
@@ -4809,11 +4809,11 @@
          2.0 
       </constant>
 <constant cols="1" digits="0" name="crankPctTable2" rows="10" units="%">
-         290.0 
-         270.0 
-         260.0 
-         250.0 
-         240.0 
+         524.0 
+         424.0 
+         344.0 
+         294.0 
+         249.0 
          234.0 
          219.0 
          179.0 
@@ -4848,8 +4848,8 @@
          135.0 
          125.0 
          120.0 
-         108.0 
          106.0 
+         105.0 
          104.0 
          103.0 
          102.0 
@@ -6234,16 +6234,16 @@
          8279.0 
          8286.0 
          16490.0 
+         8328.0 
          8329.0 
+         8330.0 
          8444.0 
-         8445.0 
          16720.0 
          16722.0 
          8543.0 
          16760.0 
          16818.0 
          8679.0 
-         0.0 
          0.0 
          0.0 
          0.0 
@@ -6885,24 +6885,24 @@
       </constant>
 <constant digits="0" name="portusage_canpwm_src">0.0</constant>
 <constant cols="1" digits="0" name="UNALLOCATED_TOP_15" rows="18" units="RAW">
-         128.0 
-         67.0 
-         33.0 
+         132.0 
+         82.0 
+         1.0 
          235.0 
          25.0 
-         73.0 
+         72.0 
          1.0 
-         16.0 
-         66.0 
-         89.0 
+         20.0 
+         82.0 
+         217.0 
          79.0 
          112.0 
          192.0 
-         173.0 
+         169.0 
          94.0 
          77.0 
-         50.0 
-         158.0 
+         18.0 
+         152.0 
       </constant>
 </page>
 <page number="16" size="1024">
@@ -7362,7 +7362,7 @@
          200.0 
          255.0 
       </constant>
-<constant name="can_rcv_var1">"CAN EGO01"</constant>
+<constant name="can_rcv_var1">"Off"</constant>
 <constant name="can_rcv_var2">"Off"</constant>
 <constant name="can_rcv_var3">"Off"</constant>
 <constant name="can_rcv_var4">"Off"</constant>
@@ -7394,7 +7394,7 @@
 <constant digits="0" name="can_rcv_off14">0.0</constant>
 <constant digits="0" name="can_rcv_off15">0.0</constant>
 <constant digits="0" name="can_rcv_off16">0.0</constant>
-<constant name="can_rcv_size1">"B2U"</constant>
+<constant name="can_rcv_size1">"L2U"</constant>
 <constant name="can_rcv_size2">"L2U"</constant>
 <constant name="can_rcv_size3">"L2U"</constant>
 <constant name="can_rcv_size4">"L2U"</constant>
@@ -7426,7 +7426,7 @@
 <constant name="can_rcv_size_ext14">"Std"</constant>
 <constant name="can_rcv_size_ext15">"Std"</constant>
 <constant name="can_rcv_size_ext16">"Std"</constant>
-<constant digits="0" name="can_rcv_mult1">10.0</constant>
+<constant digits="0" name="can_rcv_mult1">1.0</constant>
 <constant digits="0" name="can_rcv_mult2">1.0</constant>
 <constant digits="0" name="can_rcv_mult3">1.0</constant>
 <constant digits="0" name="can_rcv_mult4">1.0</constant>
@@ -7442,7 +7442,7 @@
 <constant digits="0" name="can_rcv_mult14">1.0</constant>
 <constant digits="0" name="can_rcv_mult15">1.0</constant>
 <constant digits="0" name="can_rcv_mult16">1.0</constant>
-<constant digits="0" name="can_rcv_div1">1.0</constant>
+<constant digits="0" name="can_rcv_div1">1023.0</constant>
 <constant digits="0" name="can_rcv_div2">1023.0</constant>
 <constant digits="0" name="can_rcv_div3">1023.0</constant>
 <constant digits="0" name="can_rcv_div4">1023.0</constant>
@@ -7671,7 +7671,7 @@
 <constant name="canrx1_opt_accel">"Off"</constant>
 <constant digits="0" name="canrx1_rt_gps_base">769.0</constant>
 <constant digits="0" name="canrx1_rt_accel_base">768.0</constant>
-<constant digits="0" name="can_rcv_id1">1024.0</constant>
+<constant digits="0" name="can_rcv_id1">24.0</constant>
 <constant digits="0" name="can_rcv_id2">23.0</constant>
 <constant digits="0" name="can_rcv_id3">22.0</constant>
 <constant digits="0" name="can_rcv_id4">21.0</constant>
@@ -8477,13 +8477,13 @@
 </page>
 <page number="19" size="1024">
 <constant cols="1" digits="0" name="psEnabled_2" rows="24">
+         0.0 
+         0.0 
+         0.0 
+         0.0 
+         0.0 
+         0.0 
          1.0 
-         0.0 
-         0.0 
-         0.0 
-         0.0 
-         0.0 
-         0.0 
          0.0 
          0.0 
          0.0 
@@ -8503,7 +8503,7 @@
          0.0 
       </constant>
 <constant cols="24" digits="0" name="psCondition_2" rows="2">
-         62.0 62.0 62.0 62.0 62.0 62.0 60.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 
+         62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 
          62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 62.0 
       </constant>
 <constant cols="1" digits="0" name="psConnector_2" rows="24">
@@ -8565,7 +8565,7 @@
          1.0 
          1.0 
          1.0 
-         0.0 
+         1.0 
          1.0 
          1.0 
          1.0 
@@ -8585,16 +8585,16 @@
          1.0 
       </constant>
 <constant cols="24" digits="0" name="psOutSize_2" rows="2">
-         130.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 
-         130.0 0.0 0.0 0.0 0.0 0.0 130.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+         2.0 2.0 2.0 2.0 2.0 2.0 130.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 
+         0.0 0.0 0.0 0.0 0.0 0.0 130.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
       </constant>
 <constant cols="24" digits="0" name="psOutOffset_2" rows="2">
-         6.0 6.0 6.0 6.0 6.0 6.0 24.0 6.0 6.0 6.0 6.0 6.0 6.0 6.0 6.0 6.0 6.0 6.0 6.0 6.0 6.0 6.0 6.0 6.0 
+         6.0 6.0 6.0 6.0 6.0 6.0 0.0 6.0 6.0 6.0 6.0 6.0 6.0 6.0 6.0 6.0 6.0 6.0 6.0 6.0 6.0 6.0 6.0 6.0 
          0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
       </constant>
 <constant cols="24" digits="0" name="psThreshold_2" rows="2">
-         400.0 0.0 0.0 0.0 0.0 0.0 2000.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
-         30.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+         400.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+         120.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
       </constant>
 <constant cols="24" digits="0" name="psHysteresis_2" rows="2">
          0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
